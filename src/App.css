@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+/*NavBar*/
+.mainContainer{
+  background-color: rgb(255, 241, 235);
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; 
+  background-color: #3e0b0b;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-item {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.navbar-item:hover {
+  text-decoration:none;
+  background-color: rgb(14, 118, 153);
+  color: aqua;
+}
+
+.logo {
+  height: 100px; 
+  border-radius: 90%;
+  width: auto;
+}
+
+/*Car List*/
+.car-table-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.car-table {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  width: 90%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.car-table th, .car-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.car-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.car-image {
+  height: 50px; 
+  width: auto;
+}
+
+.mainCarForm{
+  font-size: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+
+.mainFromCarList {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+}
+.image-container {
+  padding: 20px;
+  border-radius: 8px;
+  height: auto;
+  width: 500px;
+}
+.signup-form {
   display: flex;
   flex-direction: column;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffe6e6;
+  max-width: 400px;
+  margin: 20px auto;
+} 
+
+.top-container{
+  position:fixed;
+  top:110px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  background-color: #0000;
+}
+.scroll-progress-tracking-container{
+  width: 100%;
+  height: 30px;
+  background: #631616;
+}
+
+.current-progress-bar{
+
+  height: 30px;
+  background: #009340;
+  width: 0%;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px; 
+  background-color: #631616;; 
+  width: 100%;
+  position: fixed;
   color: white;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; 
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links {
+  display: flex;
+  align-items: center;
+  
+}
+
+.social-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social-link:hover {
+  color: #007bff;
 }
